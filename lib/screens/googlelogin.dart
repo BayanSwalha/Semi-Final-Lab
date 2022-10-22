@@ -2,7 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:myapp22/screens/LogIn.dart';
-import '../crud/read.dart';
+import '../crud/CRUD.dart';
 
 class AuthService {
   handleAuthState() {

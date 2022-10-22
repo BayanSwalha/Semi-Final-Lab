@@ -1,7 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import '../crud/read.dart';
+import '../crud/CRUD.dart';
 import 'googlelogin.dart';
 import 'homepageuser.dart';
 import 'resetpassword.dart';
@@ -92,7 +92,7 @@ class _Login_screenState extends State<Login_screen> {
                       onPressed: () async {
                         try {
                           var authobject = FirebaseAuth.instance;
-                          if (nameController == "admin@admin.com") {
+                          if (nameController.text.contains("@admin")) {
                             UserCredential myUser =
                                 await authobject.signInWithEmailAndPassword(
                                     email: nameController.text,
